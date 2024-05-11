@@ -10,22 +10,22 @@ public class captchaCheckCamera : MonoBehaviour
     // Start is called before the first frame update
     public GameObject nextLevel;
     public GameObject currentLevel;
-    public GameObject gameOver;
     public GameObject check;
-    public GameObject textBoxObject;
 
 
-    public void OnMouseDown()
+    public void Update()
     {
-        string text = textBoxObject.GetComponent<TMP_InputField>().text;
-        if(text == "I'm not a robot" || text == "I am not a robot" || text == "I am a human" || text == "I'm a human")
+        if (Input.GetKeyDown(KeyCode.Print))
         {
             StartCoroutine(next());
-            
         }
-        else
+    }
+
+    void OnGUI()
+    {
+        if (Event.current.type == EventType.KeyUp && Event.current.keyCode == KeyCode.SysReq)
         {
-            StartCoroutine(loss());
+            StartCoroutine(next());
         }
     }
 
@@ -35,12 +35,5 @@ public class captchaCheckCamera : MonoBehaviour
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         nextLevel.SetActive(true);
-    }
-    IEnumerator loss()
-    {
-        check.SetActive(true);
-        yield return new WaitForSeconds(1);
-        currentLevel.SetActive(false);
-        gameOver.SetActive(true);
     }
 }
