@@ -30,12 +30,20 @@ public class challenge1 : MonoBehaviour
         GameObject saved = null;
         foreach (GameObject square in squares)
         {
-            if (saved != null && square.GetComponent<squareObject>().clicked)
+            squareObject currentData = square.GetComponent<squareObject>();
+            if (currentData.correct)
             {
-                if(saved.GetComponent<squareObject>().num == square.GetComponent<squareObject>().num)
+                continue;
+            }
+
+            if (saved != null && currentData.clicked)
+            {
+                squareObject saveData = saved.GetComponent<squareObject>();
+                if (saveData.num == currentData.num)
                 {
                     square.GetComponent<SpriteRenderer>().color = Color.red;
                     saved.GetComponent<SpriteRenderer>().color = Color.red;
+                    Reset();
                 }
                 else
                 {
@@ -43,7 +51,7 @@ public class challenge1 : MonoBehaviour
                 }
                 break;
             }
-            else if (square.GetComponent<squareObject>().clicked)
+            else if (currentData.clicked)
             {
                 saved = square;
             }
@@ -57,9 +65,9 @@ public class challenge1 : MonoBehaviour
         { 
             if(square.GetComponent<SpriteRenderer>().color != Color.red)
             {
-                square.GetComponent<squareObject>().clicked = false;
                 square.GetComponent<SpriteRenderer>().color = Color.white;
             }
+            square.GetComponent<squareObject>().clicked = false;
         }
     }
 }

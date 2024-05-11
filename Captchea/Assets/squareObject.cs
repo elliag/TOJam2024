@@ -8,6 +8,7 @@ public class squareObject : MonoBehaviour
 {
 
     public bool clicked = false;
+    public bool correct = false;
     public int num = 0;
 
     // Start is called before the first frame update
@@ -23,8 +24,11 @@ public class squareObject : MonoBehaviour
 
     void OnMouseDown()
     {
-        clicked = true;
-        GetComponent<SpriteRenderer>().color = Color.blue;
+        if (!correct)
+        {
+            clicked = true;
+            GetComponent<SpriteRenderer>().color = Color.blue;
+        }
     }
 
 }
