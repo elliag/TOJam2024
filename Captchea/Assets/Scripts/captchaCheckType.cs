@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class captchaCheck : MonoBehaviour
+public class captchaCheckType : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject nextLevel;

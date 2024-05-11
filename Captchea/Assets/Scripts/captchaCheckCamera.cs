@@ -5,33 +5,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class captchaCheckTime : MonoBehaviour
+public class captchaCheckCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject gameOver;
+    public GameObject check;
     public GameObject textBoxObject;
-
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            OnMouseDown();
-        }
-    }
 
 
     public void OnMouseDown()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
-        Debug.Log(System.DateTime.Now.ToString("hh:mm"));
-        if(text == System.DateTime.Now.ToString("hh:mm"))
+        if(text == "I'm not a robot" || text == "I am not a robot" || text == "I am a human" || text == "I'm a human")
         {
             StartCoroutine(next());
             
         }
-        else if(text != "")
+        else
         {
             StartCoroutine(loss());
         }
@@ -39,12 +31,14 @@ public class captchaCheckTime : MonoBehaviour
 
     IEnumerator next()
     {
+        check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         nextLevel.SetActive(true);
     }
     IEnumerator loss()
     {
+        check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         gameOver.SetActive(true);
