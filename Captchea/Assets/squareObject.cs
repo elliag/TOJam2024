@@ -1,3 +1,10 @@
+//check if tile is clicked on, if clicked reveal underneath sprite and change clicked status to true, use Invoke() method to switch back to cover sprite after like 2 seconds
+
+
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,10 +18,15 @@ public class squareObject : MonoBehaviour
     public bool correct = false;
     public int num = 0;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite copy; //og sprite
+
+    public Sprite newSprite;    //new sprite
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -27,8 +39,9 @@ public class squareObject : MonoBehaviour
         if (!correct)
         {
             clicked = true;
-            GetComponent<SpriteRenderer>().color = Color.blue;
-        }
+            spriteRenderer.sprite = newSprite; 
+            //spriteRenderer.sprite = copy;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = newSprite;
+        }   
     }
-
 }

@@ -1,3 +1,9 @@
+//have integer value and add one every time player makes a pair (when int = 18 then player got all matches)
+//check which tiles are currently clicked, if there are two tiles clicked compare if they have the same underneath sprite, if they do then +1 to integer value
+
+//if player makes a pair, those tiles dissapear/turn white
+//player CANNOT flip more than 2 tiles at once
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
