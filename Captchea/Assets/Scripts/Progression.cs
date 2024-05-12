@@ -11,7 +11,8 @@ public class Progression : MonoBehaviour
     public GameObject LevelUI;
     public GameObject L1;
     public GameObject loading;
-    public TMP_Text LevelNum;
+    public GameObject Intro;
+    //public TMP_Text LevelNum;
     public int num = 1;
 
     //unused vvv
@@ -47,6 +48,11 @@ public class Progression : MonoBehaviour
 
     }
 
+    public void open_Intro(){
+        clear();
+        Intro.SetActive(true);
+    }
+
     public void open_Pause(){
         Pause.SetActive(true);
         
@@ -58,19 +64,18 @@ public class Progression : MonoBehaviour
     }
 
     public void open_L1(){
-        Invoke("Level1", 0.3f);
-    }
-
-    public void Level1(){
         clear();
         LevelUI.SetActive(true);
         loading.GetComponent<loadingText>().level = L1;
         loading.SetActive(true);
     }
 
+
+
     public void clear(){
         Menu.SetActive(false);
         Pause.SetActive(false);
+        Intro.SetActive(false);
         L1.SetActive(false);
         L2.SetActive(false);
         L3.SetActive(false);
