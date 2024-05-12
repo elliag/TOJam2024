@@ -1,77 +1,79 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class slidingPuzzle : MonoBehaviour
+public class SlidingPuzzle : MonoBehaviour, IPointerClickHandler
 {
-    public Transform[,] grid = new Transform[4, 4]; 
-    public Vector2Int emptyTile = new Vector2Int(2, 2); 
+    // References to components
+    private GridLayoutGroup gridLayout;
+    private RectTransform myRectTransform;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        InitializeGrid();
+        // Get the GridLayoutGroup component in the parent object
+        gridLayout = GetComponentInParent<GridLayoutGroup>();
+
+        // Get the RectTransform component of the tile
+        myRectTransform = GetComponent<RectTransform>();
     }
 
-    private void InitializeGrid()
+    // Function to handle pointer click event
+    public void OnPointerClick(PointerEventData eventData)
     {
-        foreach (Transform child in transform)
+        // Get the index of this tile and the empty tile within the grid layout
+        int myIndex = transform.GetSiblingIndex();
+        int emptyIndex = GetEmptyTileIndex();
+
+        // Swap the hierarchy if the tiles are adjacent
+        if (IsAdjacent(myIndex, emptyIndex))
         {
-            Vector2Int pos = new Vector2Int((int)child.position.x, (int)child.position.y);
-            grid[pos.x, pos.y] = child;
+            // Swap the hierarchy
+            transform.SetSiblingIndex(emptyIndex);
+
+            // Update the layout
+            gridLayout.CalculateLayoutInputHorizontal();
+            gridLayout.CalculateLayoutInputVertical();
+            gridLayout.SetLayoutHorizontal();
+            gridLayout.SetLayoutVertical();
         }
     }
+    
 
-    private void Update()
+// Function to check if two tiles are adjacent
+private bool IsAdjacent(int index1, int index2)
+{
+    int gridSize = gridLayout.constraintCount;
+
+    // Calculate row and column indices of both tiles
+    int row1 = index1 / gridSize;
+    int col1 = index1 % gridSize;
+    int row2 = index2 / gridSize;
+    int col2 = index2 % gridSize;
+
+    // Check if the tiles are adjacent horizontally or vertically
+    bool isHorizontalAdjacent = Mathf.Abs(col1 - col2) == 1 && row1 == row2;
+    bool isVerticalAdjacent = Mathf.Abs(row1 - row2) == 1 && col1 == col2;
+
+    return isHorizontalAdjacent || isVerticalAdjacent;
+}
+
+
+
+
+    // Function to get the index of the empty tile
+    private int GetEmptyTileIndex()
     {
-        if (Input.GetMouseButtonDown(0))
+        // Find the GameObject with the "EmptyTile" tag
+        GameObject emptyTile = GameObject.FindGameObjectWithTag("EmptyTile");
+
+        if (emptyTile != null)
         {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null)
-            {
-                Transform clickedTile = hit.collider.transform;
-                MoveTile(clickedTile);
-            }
+            // Get the index of the empty tile
+            return emptyTile.transform.GetSiblingIndex();
         }
-    }
 
-    private void MoveTile(Transform tile)
-    {
-        Vector2Int clickedPos = FindPosition(tile);
-        if (IsAdjacentToEmpty(clickedPos))
-        {
-            SwapTiles(clickedPos, emptyTile);
-            emptyTile = clickedPos;
-        }
-    }
-
-    private Vector2Int FindPosition(Transform tile)
-    {
-        for (int x = 0; x < 4; x++)
-        {
-            for (int y = 0; y < 4; y++)
-            {
-                if (grid[x, y] == tile)
-                {
-                    return new Vector2Int(x, y);
-                }
-            }
-        }
-        return Vector2Int.zero;
-    }
-
-    private bool IsAdjacentToEmpty(Vector2Int pos)
-    {
-        return Mathf.Abs(pos.x - emptyTile.x) + Mathf.Abs(pos.y - emptyTile.y) == 1;
-    }
-
-    private void SwapTiles(Vector2Int pos1, Vector2Int pos2)
-    {
-        Transform temp = grid[pos1.x, pos1.y];
-        grid[pos1.x, pos1.y] = grid[pos2.x, pos2.y];
-        grid[pos2.x, pos2.y] = temp;
-
-        Vector3 tempPos = grid[pos1.x, pos1.y].position;
-        grid[pos1.x, pos1.y].position = grid[pos2.x, pos2.y].position;
-        grid[pos2.x, pos2.y].position = tempPos;
+        // If no empty tile is found, return -1
+        return -1;
     }
 }

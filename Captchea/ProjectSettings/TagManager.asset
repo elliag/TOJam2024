@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Square
   - Loading
+  - EmptyTile
   layers:
   - Default
   - TransparentFX
