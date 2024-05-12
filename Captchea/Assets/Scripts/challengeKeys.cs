@@ -16,6 +16,7 @@ public class challengeKeys : MonoBehaviour
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject loading;
+    public int correctAnswers;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +41,7 @@ public class challengeKeys : MonoBehaviour
             }
         }
 
-        if(i == 4)
+        if(i == correctAnswers)
         {
             foreach (GameObject s in squares)
             {

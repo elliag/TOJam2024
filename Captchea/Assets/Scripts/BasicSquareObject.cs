@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BasicSquareObject : MonoBehaviour
 {
     public bool clicked = false;
     public bool locked = false;
+    public TMP_Text text;
     void OnMouseDown()
     {
         if (!locked)
@@ -13,11 +15,17 @@ public class BasicSquareObject : MonoBehaviour
             clicked = !clicked;
             if (clicked)
             {
-                GetComponent<SpriteRenderer>().color = Color.green;
+                if(GetComponent<SpriteRenderer>() != null)
+                    GetComponent<SpriteRenderer>().color = Color.green;
+                if (text != null)
+                    text.color = Color.green;
             }
             else
             {
-                GetComponent<SpriteRenderer>().color = Color.white;
+                if (GetComponent<SpriteRenderer>() != null)
+                    GetComponent<SpriteRenderer>().color = Color.white;
+                if (text != null)
+                    text.color = Color.white;
             }
         }
         
