@@ -16,6 +16,8 @@ public class challenge1 : MonoBehaviour
 
     public GameObject temp;
 
+    //public GameObject submit;
+
     private GameObject erase1;
     private GameObject erase2;
 
@@ -34,6 +36,8 @@ public class challenge1 : MonoBehaviour
         squares = GameObject.FindGameObjectsWithTag("Square");  //add tiles to array
         flippedTiles[0] = temp;
         flippedTiles[1] = temp;
+
+        //submit.SetActive(false);
 
     }
 
