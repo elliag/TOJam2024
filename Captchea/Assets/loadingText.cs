@@ -22,7 +22,7 @@ public class loadingText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.GetComponent<TMP_Text>().SetText("Loading: " + sliderObject.GetComponent<Slider>().value + "%");
+        text.GetComponent<TMP_Text>().SetText("Loading: " + sliderObject.GetComponent<Slider>().value + "!");
         if (!game)
         {
             current += speed * Time.deltaTime;
