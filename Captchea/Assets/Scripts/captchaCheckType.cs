@@ -13,6 +13,7 @@ public class captchaCheckType : MonoBehaviour
     public GameObject gameOver;
     public GameObject check;
     public GameObject textBoxObject;
+    public GameObject loading;
 
 
     public void OnMouseDown()
@@ -34,7 +35,9 @@ public class captchaCheckType : MonoBehaviour
         check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
-        nextLevel.SetActive(true);
+        loading.GetComponent<loadingText>().level = nextLevel;
+        loading.SetActive(true);
+        
     }
     IEnumerator loss()
     {
