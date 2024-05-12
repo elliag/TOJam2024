@@ -31,6 +31,11 @@ public class Progression : MonoBehaviour
     void Update()
     {
         //LevelNum.text = "Level " + num;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            open_Pause();
+        }
         
     }
 
