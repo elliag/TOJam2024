@@ -21387,10 +21387,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1573613992627856568, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e3b02a91608bde44db6d73795e7266d1, type: 3}
     - target: {fileID: 1631737815489967226, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7733e7ac0e3152b4c99d9903f5e564fa, type: 3}
+    - target: {fileID: 1750274114347284095, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 033ed9a2445811f4b8f4f138e8c269ca, type: 3}
     - target: {fileID: 1887323176880512754, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -21407,6 +21415,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fba9dd0a6d605fd4cb342dfceaa9864e, type: 3}
+    - target: {fileID: 2830373149044013031, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 140eee5edebb3f141930b2d4971ba06d, type: 3}
+    - target: {fileID: 4000358299519494442, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9e3a6dd4915132a4e8f4240080efd2b6, type: 3}
     - target: {fileID: 4392081163717809027, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.058773175
@@ -21455,6 +21471,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 817759863}
+    - target: {fileID: 6236026008129455723, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c5797f9e17a26e1449507ce19ef2a5b2, type: 3}
     - target: {fileID: 8873674988459069089, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_Sprite
       value: 
