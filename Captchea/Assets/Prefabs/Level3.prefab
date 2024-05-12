@@ -339,7 +339,7 @@ MonoBehaviour:
   gameOver: {fileID: 9211439384350270439}
   check: {fileID: 5347625116705436815}
   textBoxObject: {fileID: 8959804207036908512}
-  loading: {fileID: 3193530225075542495, guid: 8bb97d81182fbb649b45ba7e993c91b9, type: 3}
+  loading: {fileID: 0}
 --- !u!61 &5451120635374875377
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6275600950412088275
 Transform:
   m_ObjectHideFlags: 0

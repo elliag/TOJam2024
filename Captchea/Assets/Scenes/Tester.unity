@@ -2147,9 +2147,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089386245149626865, guid: 05cbdbad2e6c198408fdc46c4d4a945e, type: 3}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 2051472107}
+    - target: {fileID: 9089386245149626865, guid: 05cbdbad2e6c198408fdc46c4d4a945e, type: 3}
       propertyPath: nextLevel
       value: 
-      objectReference: {fileID: 155000588}
+      objectReference: {fileID: 1021889716}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2221,7 +2225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9211439384350270439, guid: 69b768f5d29632444b1b5ae04217f8ce, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2251,6 +2255,10 @@ PrefabInstance:
     - target: {fileID: 3193530225075542495, guid: 8bb97d81182fbb649b45ba7e993c91b9, type: 3}
       propertyPath: m_Name
       value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 3193530225075542495, guid: 8bb97d81182fbb649b45ba7e993c91b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4581188295934822263, guid: 8bb97d81182fbb649b45ba7e993c91b9, type: 3}
       propertyPath: level
@@ -2369,6 +2377,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5163709515768830575, guid: 65c8360e3671e7046b4f408a8e8a8417, type: 3}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 2051472107}
     - target: {fileID: 5163709515768830575, guid: 65c8360e3671e7046b4f408a8e8a8417, type: 3}
       propertyPath: nextLevel
       value: 

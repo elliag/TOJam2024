@@ -456,6 +456,7 @@ MonoBehaviour:
   currentLevel: {fileID: 2229676026167082331}
   gameOver: {fileID: 2229676026167082331}
   textBoxObject: {fileID: 1378320110056596092}
+  loading: {fileID: 0}
 --- !u!1 &2229676026167082331
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4120704495540620610
 Transform:
   m_ObjectHideFlags: 0

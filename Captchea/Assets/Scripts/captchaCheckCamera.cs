@@ -11,6 +11,7 @@ public class captchaCheckCamera : MonoBehaviour
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject check;
+    public GameObject loading;
 
 
     public void Update()
@@ -34,6 +35,8 @@ public class captchaCheckCamera : MonoBehaviour
         check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
-        nextLevel.SetActive(true);
+        loading.GetComponent<loadingText>().level = nextLevel;
+        loading.GetComponent<loadingText>().game = true;
+        loading.SetActive(true);
     }
 }

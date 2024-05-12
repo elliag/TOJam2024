@@ -12,7 +12,7 @@ public class captchaCheckTime : MonoBehaviour
     public GameObject currentLevel;
     public GameObject gameOver;
     public GameObject textBoxObject;
-
+    public GameObject loading;
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -41,7 +41,8 @@ public class captchaCheckTime : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
-        nextLevel.SetActive(true);
+        loading.GetComponent<loadingText>().level = nextLevel;
+        loading.SetActive(true);
     }
     IEnumerator loss()
     {

@@ -37,7 +37,6 @@ public class captchaCheckType : MonoBehaviour
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;
         loading.SetActive(true);
-        
     }
     IEnumerator loss()
     {
