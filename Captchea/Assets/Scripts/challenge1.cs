@@ -11,18 +11,22 @@ using UnityEngine;
 
 public class challenge1 : MonoBehaviour
 {
-    public GameObject[] squares = new GameObject[16];
-    public GameObject[] flippedTiles = new GameObject[2];
+    private GameObject[] squares = new GameObject[16];
+    private GameObject[] flippedTiles = new GameObject[2];
 
     public GameObject temp;
 
-    public GameObject erase1;
-    public GameObject erase2;
+    private GameObject erase1;
+    private GameObject erase2;
 
-    public int pairs = 0;
+    private int pairs = 0;
 
-    public bool canFlip = true; //if the player can flip a tile
-    public int numFlipped = 0;  //number of tiles flipped
+    private bool canFlip = true; //if the player can flip a tile
+    private int numFlipped = 0;  //number of tiles flipped
+
+    public GameObject nextLevel;
+    public GameObject currentLevel;
+    public GameObject loading;
 
     // Start is called before the first frame update
     void Start()
@@ -60,7 +64,7 @@ public class challenge1 : MonoBehaviour
         }
 
         if(pairs == 8){
-            //winner
+            StartCoroutine(next());
         }
     }
 
@@ -94,5 +98,13 @@ public class challenge1 : MonoBehaviour
         }
 
         numFlipped += x;
+    }
+
+    IEnumerator next()
+    {
+        yield return new WaitForSeconds(1);
+        currentLevel.SetActive(false);
+        loading.GetComponent<loadingText>().level = nextLevel;
+        loading.SetActive(true);
     }
 }
