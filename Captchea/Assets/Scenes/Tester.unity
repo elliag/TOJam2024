@@ -10092,6 +10092,7 @@ MonoBehaviour:
   Pause: {fileID: 1413604205}
   LevelUI: {fileID: 440909900}
   L1: {fileID: 2031680376}
+  loading: {fileID: 1601647819}
   LevelNum: {fileID: 0}
   num: 1
   L2: {fileID: 900671151}

@@ -10,6 +10,7 @@ public class Progression : MonoBehaviour
     public GameObject Pause;
     public GameObject LevelUI;
     public GameObject L1;
+    public GameObject loading;
     public TMP_Text LevelNum;
     public int num = 1;
 
@@ -58,7 +59,8 @@ public class Progression : MonoBehaviour
     public void Level1(){
         clear();
         LevelUI.SetActive(true);
-        L1.SetActive(true);
+        loading.GetComponent<loadingText>().level = L1;
+        loading.SetActive(true);
     }
 
     public void clear(){
