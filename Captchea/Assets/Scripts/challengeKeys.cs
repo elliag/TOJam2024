@@ -16,6 +16,7 @@ public class challengeKeys : MonoBehaviour
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject loading;
+    public GameObject cat;
     public int correctAnswers;
 
     // Start is called before the first frame update
@@ -53,7 +54,9 @@ public class challengeKeys : MonoBehaviour
 
     IEnumerator next()
     {
-        yield return new WaitForSeconds(0.5f);
+        if(cat!=null)
+            cat.SetActive(true);
+        yield return new WaitForSeconds(1f);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;
         loading.SetActive(true);
