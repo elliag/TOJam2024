@@ -21371,14 +21371,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 471333090743234692, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f4695e63b94ee494c8ad4eddccce1c32, type: 3}
+    - target: {fileID: 1182096542811484604, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d5de2c4d09856849829b91eec6d380b, type: 3}
     - target: {fileID: 1443228453917453841, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_Name
       value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 1443228453917453841, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1631737815489967226, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7733e7ac0e3152b4c99d9903f5e564fa, type: 3}
+    - target: {fileID: 1887323176880512754, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fba782c03310d614b880b98381af51b2, type: 3}
     - target: {fileID: 2541366812489631168, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: loading
       value: 
@@ -21387,6 +21403,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: 
       objectReference: {fileID: 694177491}
+    - target: {fileID: 2705959336925832947, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fba9dd0a6d605fd4cb342dfceaa9864e, type: 3}
     - target: {fileID: 4392081163717809027, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.058773175
@@ -21427,10 +21447,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5211534320352175955, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 035e1133acdd44a47a54b8279be99b49, type: 3}
     - target: {fileID: 5770081670817242907, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 817759863}
+    - target: {fileID: 8873674988459069089, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3e1fb77a84a6f84bbe64eb859fbbad5, type: 3}
+    - target: {fileID: 8887937623621921958, guid: 71ed738bf8b629f44b71ca0ff55978de, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aab5e57ed56d11f4397a129d316d1788, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
