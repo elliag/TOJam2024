@@ -56,6 +56,7 @@ public class challengeKeys : MonoBehaviour
     {
         if(cat!=null)
             cat.SetActive(true);
+
         yield return new WaitForSeconds(1f);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;

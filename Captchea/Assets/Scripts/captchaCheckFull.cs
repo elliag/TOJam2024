@@ -25,7 +25,7 @@ public class captchaCheckFull: MonoBehaviour
     public void OnMouseDown()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
-        if(text.Length > 34)
+        if(text.Length > 15)
         {
             StartCoroutine(next());
             

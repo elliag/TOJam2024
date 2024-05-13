@@ -25,7 +25,7 @@ public class captchaCheckBow: MonoBehaviour
     public void OnMouseDown()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
-        if(text == "bow" || text == "BOW")
+        if(text == "bow" || text == "BOW" || text == "Bow")
         {
             StartCoroutine(next());
             

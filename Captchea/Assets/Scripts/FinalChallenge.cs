@@ -24,7 +24,11 @@ public class FinalChallenge : MonoBehaviour
     public float count = 4.0f;
 
     public bool startGame = false;
- 
+
+    public GameObject nextLevel;
+    public GameObject currentLevel;
+    public GameObject loading;
+
     // Use this for initialization
     void Start () {
 
@@ -39,29 +43,29 @@ public class FinalChallenge : MonoBehaviour
     // Update is called once per frame
     void Update () {
 
-            targetTime -= Time.deltaTime;
-            count -= Time.deltaTime;
+        targetTime -= Time.deltaTime;
+        count -= Time.deltaTime;
 
-            if(startGame == true){
-                timer.text = "Time Remaining: " + (int)targetTime;
-                countdown.text = " ";
-            }
-            else{
-                countdown.text = (int)count + "!";
-                timer.text = "";
-            }
+        if(startGame == true){
+            timer.text = "Time Remaining: " + (int)targetTime;
+            countdown.text = " ";
+        }
+        else{
+            countdown.text = (int)count + "!";
+            timer.text = "";
+        }
 
-            mousePosition = Input.mousePosition;
-            mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+        mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
 
-            if(goat.GetComponent<PolygonCollider2D>().bounds.Intersects(barrier.GetComponent<BoxCollider2D>().bounds)){
-                reset();
-            }
+        if(goat.GetComponent<PolygonCollider2D>().bounds.Intersects(barrier.GetComponent<BoxCollider2D>().bounds)){
+            reset();
+        }
 
-            if(targetTime <= 0){
-                //winner
-            }
+        if(targetTime <= 0){
+            StartCoroutine(next());
+        }
  
     }
 
@@ -71,6 +75,14 @@ public class FinalChallenge : MonoBehaviour
         tempCage.SetActive(false);
         targetTime = 15.0f;
 
+    }
+
+    IEnumerator next()
+    {
+        yield return new WaitForSeconds(1);
+        currentLevel.SetActive(false);
+        loading.GetComponent<loadingText>().level = nextLevel;
+        loading.SetActive(true);
     }
 
     public void reset(){

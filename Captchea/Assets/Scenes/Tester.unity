@@ -8278,6 +8278,9 @@ MonoBehaviour:
   targetTime: 15
   count: 3
   startGame: 0
+  nextLevel: {fileID: 412560660}
+  currentLevel: {fileID: 694177491}
+  loading: {fileID: 1601647819}
 --- !u!212 &691548154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10884,10 +10887,10 @@ Transform:
   m_LocalScale: {x: 0.43, y: 0.43, z: 0.43}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 860736418}
   - {fileID: 1009178851}
   - {fileID: 1691503850}
   - {fileID: 483770843}
-  - {fileID: 860736418}
   - {fileID: 2043675767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
