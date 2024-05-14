@@ -10,9 +10,9 @@ public class captchaCheckCamera : MonoBehaviour
     // Start is called before the first frame update
     public GameObject nextLevel;
     public GameObject currentLevel;
-    public GameObject check;
+    public GameObject photo;
+    public Sprite winPhoto;
     public GameObject loading;
-
 
     public void Update()
     {
@@ -32,7 +32,7 @@ public class captchaCheckCamera : MonoBehaviour
 
     IEnumerator next()
     {
-        check.SetActive(true);
+        photo.GetComponent<SpriteRenderer>().sprite = winPhoto;
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;

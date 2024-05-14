@@ -33,6 +33,7 @@ public class ScrollingText : MonoBehaviour
         noButton.SetActive(false);
         enterButton.SetActive(true);
         startButton.SetActive(false);
+
     }
 
     public void ActivateText(){

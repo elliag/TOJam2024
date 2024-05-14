@@ -19,6 +19,7 @@ public class captchaCheckType : MonoBehaviour
     public void OnMouseDown()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
+        
         if(text == "I'm not a robot" || text == "I am not a robot" || text == "I am a human" || text == "I'm a human")
         {
             StartCoroutine(next());
@@ -40,7 +41,7 @@ public class captchaCheckType : MonoBehaviour
     }
     IEnumerator loss()
     {
-        check.SetActive(true);
+        //check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         gameOver.SetActive(true);
