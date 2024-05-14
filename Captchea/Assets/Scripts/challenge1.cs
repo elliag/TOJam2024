@@ -30,6 +30,8 @@ public class challenge1 : MonoBehaviour
     public GameObject currentLevel;
     public GameObject loading;
 
+    public SoundManager playSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,6 +70,7 @@ public class challenge1 : MonoBehaviour
         }
 
         if(pairs == 8){
+            playSound.playClip("win");
             StartCoroutine(next());
         }
     }
@@ -105,10 +108,12 @@ public class challenge1 : MonoBehaviour
     }
 
     IEnumerator next()
-    {
+    {   
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;
         loading.SetActive(true);
     }
+
+    
 }
