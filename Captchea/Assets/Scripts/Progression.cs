@@ -12,6 +12,7 @@ public class Progression : MonoBehaviour
     public GameObject L1;
     public GameObject loading;
     public GameObject Intro;
+    
     //public TMP_Text LevelNum;
     public int num = 1;
 
@@ -91,49 +92,6 @@ public class Progression : MonoBehaviour
 
     //unused vvv
 
-    public void open_L2(){
-        Invoke("Level2", 1.0f);
-    }
 
-    public void Level2(){
-        clear();
-        L2.SetActive(true);
-    }
-
-    public void open_L3(){
-        Invoke("Level3", 1.0f);
-    }
-
-    public void Level3(){
-        clear();
-        L3.SetActive(true);
-    }
-
-    public void open_L4(){
-        Invoke("Level4", 1.0f);
-    }
-
-    public void Level4(){
-        clear();
-        L4.SetActive(true);
-    }
-
-    public void open_L5(){
-        Invoke("Level5", 1.0f);
-    }
-
-    public void Level5(){
-        clear();
-        L5.SetActive(true);
-    }
-
-    public void open_L6(){
-        Invoke("Level6", 1.0f);
-    }
-
-    public void Level6(){
-        clear();
-        L6.SetActive(true);
-    }
 
 }
