@@ -15,11 +15,11 @@ public class captchaCheckTime : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            OnMouseDown();
+            clickButton();
         }
     }
 
-    public void OnMouseDown()
+    public void clickButton()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text.Trim();
         Debug.Log(System.DateTime.Now.ToString("hh:mm"));

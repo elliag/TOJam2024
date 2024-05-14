@@ -13,23 +13,9 @@ public class captchaCheckTilt : MonoBehaviour
     public GameObject loading;
 
 
-    public void OnMouseDown()
+    public void clickButton()
     {
         StartCoroutine(next());
-    }
-
-    void OnMouseEnter()
-    {
-        Color tmp = GetComponent<SpriteRenderer>().color;
-        tmp.a = 0.5f;
-        GetComponent<SpriteRenderer>().color = tmp;
-    }
-
-    void OnMouseExit()
-    {
-        Color tmp = GetComponent<SpriteRenderer>().color;
-        tmp.a = 0f;
-        GetComponent<SpriteRenderer>().color = tmp;
     }
 
     IEnumerator next()

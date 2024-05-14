@@ -17,12 +17,12 @@ public class captchaCheckFull: MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            OnMouseDown();
+            clickButton();
         }
     }
 
 
-    public void OnMouseDown()
+    public void clickButton()
     {
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
         if(text.Length > 15)
