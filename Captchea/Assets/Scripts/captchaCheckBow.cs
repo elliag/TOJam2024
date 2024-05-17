@@ -13,6 +13,7 @@ public class captchaCheckBow: MonoBehaviour
     public GameObject gameOver;
     public GameObject textBoxObject;
     public GameObject loading;
+    public SoundManager playSound;
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -38,6 +39,7 @@ public class captchaCheckBow: MonoBehaviour
 
     IEnumerator next()
     {
+        playSound.playClip("win");
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;
@@ -45,6 +47,7 @@ public class captchaCheckBow: MonoBehaviour
     }
     IEnumerator loss()
     {
+        playSound.playClip("lose");
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         gameOver.SetActive(true);

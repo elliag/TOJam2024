@@ -18,6 +18,7 @@ public class challengeKeys : MonoBehaviour
     public GameObject loading;
     public GameObject cat;
     public int correctAnswers;
+    public SoundManager playSound;
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +57,7 @@ public class challengeKeys : MonoBehaviour
     {
         if(cat!=null)
             cat.SetActive(true);
+        playSound.playClip("win");
 
         yield return new WaitForSeconds(1f);
         currentLevel.SetActive(false);

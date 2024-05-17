@@ -13,6 +13,7 @@ public class captchaCheckCamera : MonoBehaviour
     public GameObject photo;
     public Sprite winPhoto;
     public GameObject loading;
+    public SoundManager playSound;
 
     public void Update()
     {
@@ -32,6 +33,7 @@ public class captchaCheckCamera : MonoBehaviour
 
     IEnumerator next()
     {
+        playSound.playClip("win");
         photo.GetComponent<SpriteRenderer>().sprite = winPhoto;
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);

@@ -13,6 +13,7 @@ public class loadingText : MonoBehaviour
     private float current;
     public bool game = false;
     public bool stop = false;
+    public SoundManager playSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +46,7 @@ public class loadingText : MonoBehaviour
        
         if(sliderObject.GetComponent<Slider>().value >= 100)
         {
+            playSound.playClip("file");
             current = 10;
             game = false;
             stop = false;

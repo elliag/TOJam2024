@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         audioSrc = gameObject.GetComponent<AudioSource>();
+        //audioSrc.outputAudioMixerGroup = GetComponent<AudioListener>();
     }
 
     // Update is called once per frame

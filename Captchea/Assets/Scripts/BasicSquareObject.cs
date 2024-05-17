@@ -8,10 +8,12 @@ public class BasicSquareObject : MonoBehaviour
     public bool clicked = false;
     public bool locked = false;
     public TMP_Text text;
+    public SoundManager playSound;
     void OnMouseDown()
     {
         if (!locked)
         {
+            playSound.playClip("click");
             clicked = !clicked;
             if (clicked)
             {

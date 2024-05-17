@@ -11,6 +11,7 @@ public class captchaCheckTilt : MonoBehaviour
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject loading;
+    public SoundManager playSound;
 
 
     public void clickButton()
@@ -20,6 +21,7 @@ public class captchaCheckTilt : MonoBehaviour
 
     IEnumerator next()
     {
+        playSound.playClip("win");
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;

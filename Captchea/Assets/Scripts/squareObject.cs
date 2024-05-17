@@ -19,6 +19,8 @@ public class squareObject : MonoBehaviour
 
     public challenge1 Tiles; //to get number of tiles flipped
 
+    public SoundManager playSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class squareObject : MonoBehaviour
     void OnMouseDown()
     {
         if(Tiles.getFlipped() == true){
+            playSound.playClip("click");
             Tiles.setFlipped(1, gameObject);
             clicked = true;
 

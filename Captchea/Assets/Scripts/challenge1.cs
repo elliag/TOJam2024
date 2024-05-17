@@ -56,6 +56,7 @@ public class challenge1 : MonoBehaviour
 
         if((flippedTiles[0] != temp) && (flippedTiles[1] != temp)){
             if((flippedTiles[0].GetComponent<SpriteRenderer>().sprite.name == flippedTiles[1].GetComponent<SpriteRenderer>().sprite.name)){
+                playSound.playClip("submit");
                 pairs += 1;
                 flippedTiles[0].GetComponent<SpriteRenderer>().color = Color.green;
                 flippedTiles[1].GetComponent<SpriteRenderer>().color = Color.green;

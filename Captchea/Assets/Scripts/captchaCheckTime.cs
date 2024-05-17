@@ -10,6 +10,7 @@ public class captchaCheckTime : MonoBehaviour
     public GameObject gameOver;
     public GameObject textBoxObject;
     public GameObject loading;
+    public SoundManager playSound;
 
     public void Update()
     {
@@ -71,6 +72,7 @@ public class captchaCheckTime : MonoBehaviour
 
     IEnumerator next()
     {
+        playSound.playClip("win");
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         loading.GetComponent<loadingText>().level = nextLevel;
@@ -79,6 +81,7 @@ public class captchaCheckTime : MonoBehaviour
 
     IEnumerator loss()
     {
+        playSound.playClip("loss");
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         gameOver.SetActive(true);

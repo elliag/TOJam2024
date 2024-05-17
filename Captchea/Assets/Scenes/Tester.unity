@@ -172,6 +172,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1311416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1120,6 +1121,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &42696543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2056,7 +2058,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: click
+          m_StringArgument: loss
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &89798948
@@ -2327,6 +2329,7 @@ MonoBehaviour:
   gameOver: {fileID: 3739149910571952489}
   textBoxObject: {fileID: 4235441515101936083}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!114 &104833368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3989,6 +3992,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &194656179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4271,6 +4275,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 6f60bf56511613348a369406d1124c14, type: 3}
   flippedSprite: {fileID: 21300000, guid: 5b322831212131640a4e782754ad1b12, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &195321000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4501,6 +4506,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &203332998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6493,6 +6499,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &320814201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6839,6 +6846,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &336093375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8306,6 +8314,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &433982862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9124,6 +9133,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &463167464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9325,6 +9335,7 @@ MonoBehaviour:
   check: {fileID: 1009178849}
   textBoxObject: {fileID: 1897211699}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!212 &483770846
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9567,6 +9578,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 3474a37bfceb2bf4f9ef0b37aa28465a, type: 3}
   flippedSprite: {fileID: 21300000, guid: de3f1bf2c3dc41a439601971c24e265a, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &500041511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9673,6 +9685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518074295}
+  - component: {fileID: 518074296}
   m_Layer: 0
   m_Name: temp
   m_TagString: Untagged
@@ -9695,6 +9708,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &518074296
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518074294}
+  m_Enabled: 1
 --- !u!1 &518807362
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,6 +10056,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 3f86f25ff30ea9c479fa79b0d3e08d5a, type: 3}
   flippedSprite: {fileID: 21300000, guid: b27b6fb806758e042aefe71a62384d31, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &548419844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10183,6 +10205,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 5d09392786ffb8c40947823a17e55789, type: 3}
   flippedSprite: {fileID: 21300000, guid: d3975595aa9e151438ee586e19cc3879, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &554167866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11138,6 +11161,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &630563185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11423,6 +11447,7 @@ MonoBehaviour:
   nextLevel: {fileID: 3739149910571952489}
   currentLevel: {fileID: 1057114168}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!114 &644009673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12246,6 +12271,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &680959062
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14232,6 +14258,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &840957325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14380,6 +14407,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: afa336872823d22458e0077b8a694703, type: 3}
   flippedSprite: {fileID: 21300000, guid: adcba27a024b77b4a8e3b0d3de4d8aa7, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &849141132
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14526,6 +14554,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &853578116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14908,6 +14937,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &868331397
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15202,6 +15232,7 @@ MonoBehaviour:
   loading: {fileID: 1601647819}
   cat: {fileID: 5369818422801132758}
   correctAnswers: 1
+  playSound: {fileID: 152578773}
 --- !u!1 &883303526
 GameObject:
   m_ObjectHideFlags: 0
@@ -15253,6 +15284,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 55a3ff036de62af4ebd9f2d56d7a7914, type: 3}
   flippedSprite: {fileID: 21300000, guid: 35d970fe44c634745a8327b483c86d61, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &883303529
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15399,6 +15431,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &883476076
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15885,6 +15918,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &908218450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16575,6 +16609,7 @@ MonoBehaviour:
   gameOver: {fileID: 1915898476}
   textBoxObject: {fileID: 1937029972}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!61 &943862006
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16864,6 +16899,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 4ceb7d770f47de444a42d8546689a30d, type: 3}
   flippedSprite: {fileID: 21300000, guid: 5b322831212131640a4e782754ad1b12, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &955786185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17094,6 +17130,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &960653633
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17240,6 +17277,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &964894819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17571,7 +17609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1009178850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17974,6 +18012,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: b7c5bf7ea0e85374f83133640b57ab6a, type: 3}
   flippedSprite: {fileID: 21300000, guid: e9ab504424f247c49a5fb57a1cd6216d, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1039705358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18365,6 +18404,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1067439348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18780,6 +18820,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!114 &1089921142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18977,6 +19018,7 @@ MonoBehaviour:
   gameOver: {fileID: 3739149910571952489}
   textBoxObject: {fileID: 4235441515101936083}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 0}
 --- !u!114 &1092326882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19234,6 +19276,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 6875c0d2d5976374c99b6a21eca2b6b7, type: 3}
   flippedSprite: {fileID: 21300000, guid: adcba27a024b77b4a8e3b0d3de4d8aa7, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1134091889
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19859,6 +19902,7 @@ MonoBehaviour:
   gameOver: {fileID: 759984273}
   textBoxObject: {fileID: 37697228}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!61 &1221311077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20275,6 +20319,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1231150931
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20855,6 +20900,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1249197643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21191,6 +21237,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: f781622473e941543975d2e427291983, type: 3}
   flippedSprite: {fileID: 21300000, guid: d3975595aa9e151438ee586e19cc3879, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1273481235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22022,6 +22069,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1322337605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22168,6 +22216,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1358668805
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22314,6 +22363,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1378494396
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22917,6 +22967,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1413741085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23601,6 +23652,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: c0503e2db1581764398f60a53e1f6a6e, type: 3}
   flippedSprite: {fileID: 21300000, guid: de3f1bf2c3dc41a439601971c24e265a, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1440926952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23883,6 +23935,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: eee3efe3c680d4549bab0f1ab78831ac, type: 3}
   flippedSprite: {fileID: 21300000, guid: 35d970fe44c634745a8327b483c86d61, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1477972196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24919,6 +24972,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 1516847427}
+  playSound: {fileID: 152578773}
 --- !u!61 &1516847426
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25590,7 +25644,7 @@ GameObject:
   - component: {fileID: 1537163750}
   m_Layer: 0
   m_Name: memory_game
-  m_TagString: Square
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27032,6 +27086,7 @@ MonoBehaviour:
   gameOver: {fileID: 759984273}
   textBoxObject: {fileID: 37697228}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 0}
 --- !u!61 &1598904233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27179,6 +27234,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 5d878fe4ca816b243ba1e3b47a6a7e84, type: 3}
   flippedSprite: {fileID: 21300000, guid: e9ab504424f247c49a5fb57a1cd6216d, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1610796413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27411,6 +27467,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 68b1701895ae8d845a226807e4370698, type: 3}
   flippedSprite: {fileID: 21300000, guid: b27b6fb806758e042aefe71a62384d31, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1629940524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27573,6 +27630,7 @@ MonoBehaviour:
   loading: {fileID: 1601647819}
   cat: {fileID: 0}
   correctAnswers: 4
+  playSound: {fileID: 152578773}
 --- !u!1 &1648466710
 GameObject:
   m_ObjectHideFlags: 0
@@ -27624,6 +27682,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: 7355c47bf1fb78840ba48593ee9f637c, type: 3}
   flippedSprite: {fileID: 21300000, guid: 9ca0f0624eb6a124f9eeca58cc72d1e4, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &1648466713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28427,6 +28486,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1693503042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28573,6 +28633,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1699051256
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28704,6 +28765,7 @@ MonoBehaviour:
   photo: {fileID: 1903513516}
   winPhoto: {fileID: 21300000, guid: 01d566418c4567842b9094464169e0d1, type: 3}
   loading: {fileID: 1601647819}
+  playSound: {fileID: 152578773}
 --- !u!4 &1706641157
 Transform:
   m_ObjectHideFlags: 0
@@ -31224,6 +31286,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!114 &1814638532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31414,6 +31477,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1821619869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32832,6 +32896,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &1895549794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34707,6 +34772,7 @@ MonoBehaviour:
   normalSprite: {fileID: 21300000, guid: efd620345a2727f49909a9bbcac599e3, type: 3}
   flippedSprite: {fileID: 21300000, guid: 9ca0f0624eb6a124f9eeca58cc72d1e4, type: 3}
   Tiles: {fileID: 1537163750}
+  playSound: {fileID: 152578773}
 --- !u!61 &2002702203
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35310,6 +35376,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &2023647907
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35747,6 +35814,7 @@ MonoBehaviour:
   clicked: 0
   locked: 0
   text: {fileID: 0}
+  playSound: {fileID: 152578773}
 --- !u!61 &2065432846
 BoxCollider2D:
   m_ObjectHideFlags: 0

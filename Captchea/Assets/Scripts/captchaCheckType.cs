@@ -14,16 +14,17 @@ public class captchaCheckType : MonoBehaviour
     public GameObject check;
     public GameObject textBoxObject;
     public GameObject loading;
+    public SoundManager playSound;
 
 
     public void OnMouseDown()
     {
+        playSound.playClip("click");
         string text = textBoxObject.GetComponent<TMP_InputField>().text;
         
         if(text == "I'm not a robot" || text == "I am not a robot" || text == "I am a human" || text == "I'm a human")
         {
             StartCoroutine(next());
-            
         }
         else
         {
@@ -33,6 +34,7 @@ public class captchaCheckType : MonoBehaviour
 
     IEnumerator next()
     {
+        playSound.playClip("win");
         check.SetActive(true);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
@@ -41,7 +43,8 @@ public class captchaCheckType : MonoBehaviour
     }
     IEnumerator loss()
     {
-        //check.SetActive(true);
+        playSound.playClip("lose");
+        check.SetActive(false);
         yield return new WaitForSeconds(1);
         currentLevel.SetActive(false);
         gameOver.SetActive(true);
