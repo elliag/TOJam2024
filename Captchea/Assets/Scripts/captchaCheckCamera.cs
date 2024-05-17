@@ -1,13 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class captchaCheckCamera : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject nextLevel;
     public GameObject currentLevel;
     public GameObject photo;
@@ -15,9 +10,9 @@ public class captchaCheckCamera : MonoBehaviour
     public GameObject loading;
     public SoundManager playSound;
 
-    public void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Print))
+        if (Input.GetKeyDown(KeyCode.Print) || Input.GetKeyDown(KeyCode.SysReq))
         {
             StartCoroutine(next());
         }
@@ -25,7 +20,7 @@ public class captchaCheckCamera : MonoBehaviour
 
     void OnGUI()
     {
-        if (Event.current.type == EventType.KeyUp && Event.current.keyCode == KeyCode.SysReq)
+        if (Event.current.type == EventType.KeyUp && (Event.current.keyCode == KeyCode.Print || Event.current.keyCode == KeyCode.SysReq))
         {
             StartCoroutine(next());
         }
