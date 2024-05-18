@@ -3,7 +3,16 @@ guid: 14fe01a1cdc36324f8580d23ccc541be
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - barrier: {instanceID: 0}
+  - goat: {instanceID: 0}
+  - tempCage: {instanceID: 0}
+  - cage: {instanceID: 0}
+  - timer: {instanceID: 0}
+  - countdown: {instanceID: 0}
+  - nextLevel: {instanceID: 0}
+  - currentLevel: {instanceID: 0}
+  - loading: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
