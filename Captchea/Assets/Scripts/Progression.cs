@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Progression : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class Progression : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        open_Menu();
+        open_Start();
         
     }
 
@@ -42,11 +43,19 @@ public class Progression : MonoBehaviour
         
     }
 
-    public void open_Menu(){
+    public void open_Start(){
         clear();
         LevelUI.SetActive(false);
         Menu.SetActive(true);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
+    public void open_Menu()
+    {
+        clear();
+        LevelUI.SetActive(false);
+        Menu.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void open_Intro(){
